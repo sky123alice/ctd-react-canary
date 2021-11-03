@@ -1,4 +1,7 @@
 import React from 'react';
+import AddToDoForm from './AddTodoForm';
+import TodoListItem from './TodoListItem';
+
 
 const todoList = [
     {
@@ -16,15 +19,14 @@ const todoList = [
   
   ];
 
-function TodoList(){
-    return(
-        <ul>{
-            todoList.map(function (item){
-              return <li key={item.id}>{item.title}</li>;
-            })}
-        </ul>
+const TodoList = (props) => (
+    <ul>
+      {props.list.map((item) => (
+        <TodoListItem key={item.id} todo={item} /> 
+      ))}
+    </ul>
 
-    );
-}
+  );
+ 
 
 export default TodoList;
