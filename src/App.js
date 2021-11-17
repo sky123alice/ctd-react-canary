@@ -18,10 +18,6 @@ function App() {
       <div>
         <h1>Todo List  </h1>
           <AddToDoForm onAddTodo={addTodo} />
-          <p>
-             {/* {newTodo.title} */}
-          </p>
-
           <TodoList todoList={todoList} />
       </div>
    
