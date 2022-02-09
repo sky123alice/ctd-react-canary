@@ -2,7 +2,7 @@ import React from 'react';
 import TodoList from './TodoList.js';
 import AddToDoForm from './AddTodoForm.js';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-
+import AppStyles from './App.module.css';
 
 
 
@@ -44,11 +44,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path = "/" element={
-          <>
+          <div className={AppStyles.container}>
            <h1>Todo List</h1>
-           <AddToDoForm onAddTodo={addTodo}/> 
+           <AddToDoForm onAddTodo={addTodo} className={AppStyles.button}/> 
            {(isLoading)? <p>Loading...</p> : <TodoList todoList={todoList} onRemoveTodo={removeTodo}/>}
-          </>
+          </div>
         }/>
       
         <Route path = "/new" element={
