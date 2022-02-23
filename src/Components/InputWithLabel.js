@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function InputWithLabel(props){
    
@@ -30,7 +31,7 @@ function InputWithLabel(props){
     );
 }
 
-InputWithLabel.PropTypes = {
+InputWithLabel.propTypes = {
     value: PropTypes.string,
     onChange: PropTypes.func
 

@@ -36,7 +36,7 @@ function AddToDoForm({onAddTodo}){
     );
 }
 
-AddToDoForm.PropTypes = {
+AddToDoForm.propTypes = {
     onAddTodo: PropTypes.func
 };
 
