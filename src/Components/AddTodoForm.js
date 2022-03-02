@@ -11,13 +11,14 @@ function AddToDoForm({onAddTodo}){
         const newTodoTitle = event.target.value;
         event.preventDefault();
         setTodoTitle(event.target.value);
-        console.log(newTodoTitle);
-    
     }
 
     const handleAddTodo = (event) => {
         event.preventDefault();
-        onAddTodo({title:todoTitle, id: Date.now()});   
+        onAddTodo({fields: {
+            Title: todoTitle,
+          }
+    , id: Date.now()});   
         setTodoTitle('');
     }
     
@@ -36,8 +37,8 @@ function AddToDoForm({onAddTodo}){
     );
 }
 
-AddToDoForm.propTypes = {
-    onAddTodo: PropTypes.func
-};
+// AddToDoForm.propTypes = {
+//     onAddTodo: PropTypes.func
+// };
 
 export default AddToDoForm;

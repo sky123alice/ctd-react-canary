@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 const TodoList = ({todoList, onRemoveTodo}) => { 
-  
+  console.log("todolist:",todoList);
    return(
    <ul>
       {todoList.map((item) => (
